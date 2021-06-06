@@ -1,5 +1,18 @@
-<h1>New Event</h1>
 
-<%= render 'form', event: @event %>
 
-<%= link_to 'Back', events_path %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+
+        <p class="title is-5">Ain't a party-pooper anymore!</p>
+
+        <%= render 'form', event: @event %>
+
+        <%= link_to 'Back', events_path %>
+
+
+      </div>
+    </div>
+  </div>
+</section>
