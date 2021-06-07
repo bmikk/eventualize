@@ -12,10 +12,14 @@
           </div>
           <div class="media-content">
             <div class="content">
-                <strong><%= event.title %></strong><br/>
-                <small><%= event.location %></small><br/>
-                <small><%= event.start_date_and_time %></small>
-                <p><%= event.description %></p>
+              <strong><%= event.title %></strong><br/>
+              <small><%= event.location %></small><br/>
+              <small><%= event.start_date_and_time %></small>
+            </div>
+            </div class="content">
+              <p class="control">
+                <%= link_to "Register", event, class: "button is-primary" %>
+              </p>
             </div>
             <% if user_signed_in? %>
               <nav class="level">
