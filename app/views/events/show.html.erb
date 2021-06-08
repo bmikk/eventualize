@@ -44,7 +44,7 @@
               </p>
               <div class="content">
                 
-                  <%= link_to "Register", event_attending_path(attended_event_id: @event.id), method: :get, class: "button is-primary is-large" %>
+                    <%= link_to "Register", event_attendings_path(attended_event_id: @event.id, guest_id: current_user.id), method: :create, class: "button is-primary is-large" %>
 
               </div>
             </div>

@@ -7,15 +7,16 @@ class EventAttendingsController < ApplicationController
   end
 
   def new
+    @event_attending = EventAttending.new
   end
   
   def create
     @event = set_event()
-    @event_attending = EventAttending.new(attended_event_id: @event.id, guest_id: current_user.id)
+    attendance = @event.event_attendings.build(event_attending_params)
 
     respond_to do |format|
-      if @event_attending.save
-        format.html { redirect_to @event_attending, notice: "Event was successfully created." }
+      if attendance.save
+        format.html { redirect_to @event, notice: "You have successfully registered for the event." }
         format.json { render :show, status: :created, location: @event_attending }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -30,10 +31,17 @@ class EventAttendingsController < ApplicationController
   private
 
   def set_event
-    @event = Event.find(params[:id])
+    Event.find(params[:attended_event_id])
+  end
+
+  def event_attending_params
+    #params.fetch(:event, {})
+    params.permit(:attended_event_id, :guest_id)
   end
 
 
 end
+
+
 
 
