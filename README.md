@@ -1,24 +1,5 @@
-# README
+# Eventualize
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple event-tracking web app, currently a work in progress.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+When finished, users will be able to create events as well as register for other users' events.
