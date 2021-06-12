@@ -1,6 +1,6 @@
 <section class="section">
   <div class="columns is-centered">
-    <div class="column is-half">
+    <div class="column is-three-quarters">
 
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">
@@ -17,20 +17,16 @@
             </div>
             <div class="tile is-parent">
               <article class="tile is-child box">
-                <p class="title">The Host</p>
-                <p class="subtitle"><%= @event.host.name %></p>
-                <figure class="image is-128by128">
-                  <%= gravatar_image_tag(@event.host.email, size: 64, alt: @event.host.name) %>
-                </figure>
+                <p class="title">Description</p>
+                <%= @event.description %>
               </article>
             </div>
           </div>
           <div class="tile is-parent">
             <article class="tile is-child box">
-              <p class="title">When does it begin?</p>
-              <p class="subtitle"><%= @event.start_date_and_time %></p>
               <div class="content">
-                <!-- Content -->
+                <p class="title">Date and Time</p>
+                <%= @event.start_date_and_time %>
               </div>
             </article>
           </div>
@@ -38,14 +34,14 @@
         <div class="tile is-parent">
           <article class="tile is-child box">
             <div class="content">
-              <p class="title">Details</p>
-              <p class="subtitle">
-                <%= @event.description %>
-              </p>
-              <div class="content">
-                
-                    <%= link_to "Register", event_attendings_path(attended_event_id: @event.id, guest_id: current_user.id), method: :create, class: "button is-primary is-large" %>
 
+              <%= render 'guestlist' %>
+
+              <div class="content">
+                <%= link_to "Register", 
+                            event_attendings_path(attended_event_id: @event.id, guest_id: current_user.id), 
+                            method: :create, 
+                            class: "button is-primary is-large" %>
               </div>
             </div>
           </article>

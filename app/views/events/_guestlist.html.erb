@@ -1,0 +1,12 @@
+<nav class="panel">
+
+
+  <p class="panel-heading">
+    Guestslist
+  </p>
+
+  <% @event.guests.each do |guest| %>
+    <a class="panel-block"><%= guest.name %></a>
+  <% end %>
+
+</nav>
