@@ -16,11 +16,9 @@
             <small><%= event.location %></small><br/>
             <small><%= event.start_date_and_time %></small>
           </div>
-          </div class="media-right">
             <p class="control">
               <%= link_to "Details", event, class: "button is-primary" %>
             </p>
-          </div>
           <% if user_signed_in? %>
             <nav class="level">
               <div class="level-left is-mobile">

@@ -1,0 +1,29 @@
+
+<!--This should fit within a "columns" div -->
+
+<div class="column is-half">
+  
+      <% @user.attended_events.each do |event| %>
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <%= gravatar_image_tag(event.host.email, size: 64, alt: event.host.name) %>
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <strong><%= event.title %></strong><br/>
+                <small><%= event.location %></small><br/>
+                <small><%= event.start_date_and_time %></small>
+              </div>
+
+                <p class="control">
+                  <%= link_to "Details", event, class: "button is-primary" %>
+                </p>
+
+            </div>
+          </article>
+        </div>
+      <% end %>
+</div>

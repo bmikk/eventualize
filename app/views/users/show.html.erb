@@ -1,8 +1,12 @@
 <section class="section">
   <p class="title"><%= @user.name %></p>
-  <div class="columns is centered">
-    <div class="column is-half">
-      <%= render 'hosted_events' %>
+    <div class="container">
+      <div class="columns is centered">
+      
+        <%= render 'hosted_events' %>
+
+        <%= render 'attended_events' %>
+
+      </div>
     </div>
-  </div>
 </section>
