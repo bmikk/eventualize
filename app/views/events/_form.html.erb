@@ -20,13 +20,21 @@
       </div>
     </div>
 
-    <div class="field">
+    <div class="field is-grouped">
       <div class="control">
-        <%= f.input :start_date_and_time,
-                    label: "What's the time and day?",
+        <%= f.input :start_date,
+                    label: "What day?",
                     required: false,
-                    placeholder: "Time and date...",
-                    input_html: {class: "input" },
+                    placeholder: "Day",
+                    label_html: { class: "label" },
+                    wrapper: false %>
+      </div>
+
+      <div class="control">
+        <%= f.input :start_time,
+                    label: "What time?",
+                    required: false,
+                    placeholder: "Time",
                     label_html: { class: "label" },
                     wrapper: false %>
       </div>

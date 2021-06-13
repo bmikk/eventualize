@@ -14,7 +14,7 @@
           <div class="content">
             <strong><%= event.title %></strong><br/>
             <small><%= event.location %></small><br/>
-            <small><%= event.start_date_and_time %></small>
+            <small><%= event.start_date.month %>/<%= event.start_date.day %>/<%= event.start_date.year %> <%= event.start_time %></small>
           </div>
             <p class="control">
               <%= link_to "Details", event, class: "button is-primary" %>

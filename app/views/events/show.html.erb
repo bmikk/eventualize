@@ -26,7 +26,8 @@
             <article class="tile is-child box">
               <div class="content">
                 <p class="title">Date and Time</p>
-                <%= @event.start_date_and_time %>
+                <%= @event.start_date.month %>/<%= @event.start_date.day %>/<%= @event.start_date.year %> <%= @event.start_time %>
+
               </div>
             </article>
           </div>
