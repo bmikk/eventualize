@@ -49,13 +49,13 @@
 
               <% if user_signed_in? %>
                 <p class="control">
-                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-primary" %>
+                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-warning" %>
                 </p>
                 <p class="control">
-                  <%= link_to "New Event", new_event_path, class: "button is-primary is-inverted" %>
+                  <%= link_to "New Event", new_event_path, class: "button is-warning is-inverted" %>
                 </p>
                 <p>
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "button is-info" %>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "button is-warning is-inverted" %>
                 </p>
               <% else %>
                 <p class="control">
